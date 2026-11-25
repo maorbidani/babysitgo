@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Rubik', system-ui, -apple-system, sans-serif;
+    --font-sans: 'Heebo', system-ui, -apple-system, sans-serif;
+    --color-primary: #1A73E8;
+    --color-secondary: #34A853;
+    --color-bg: #FFFDF9;
+    --color-peach: #FFF4EC;
+    --color-lavender: #F0F6FF;
+    --color-text: #222222;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.glass-card {
+  background-color: rgba(255, 253, 249, 0.84);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-color: rgba(255, 255, 255, 0.85);
+}
+
+@keyframes splashFloat {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-6px) scale(1.015);
+  }
+}
+
+@keyframes splashProgressFill {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-splash-float {
+  animation: splashFloat 3.6s ease-in-out infinite;
+}
+
+.animate-splash-progress {
+  animation: splashProgressFill 7s linear forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

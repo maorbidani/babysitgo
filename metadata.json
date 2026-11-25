@@ -1,0 +1,6 @@
+{
+  "name": "BabysitGo — בייביסיטר מאומתת ובטוחה",
+  "description": "BabysitGo — ביטחון, חום ושקט נפשי למשפחה שלך. פלטפורמה בטוחה להורים ובייביסיטריות באזור המגורים, עם צ׳אט מוגן, כפתור SOS, תמחור שקוף ומעקב עבודה חי.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
